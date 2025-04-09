@@ -40,20 +40,23 @@ function makePredictions() {
         contentType: 'application/json;charset=UTF-8',
         data: JSON.stringify({ "data": payload }),
         success: function(returnedData) {
-            // print it
+            // Log the returned data for debugging
             console.log(returnedData);
-            let prob = parseFloat(returnedData["prediction"]);
 
+            // Parse the prediction probability from the returned data
+            let prob = parseFloat(returnedData["prediction"]).toFixed(2); // Format to 2 decimal places
+
+            // Display the result based on the probability
             if (prob > 0.5) {
-                $("#output").text(`You Survived with probability ${prob}!`);
+                $("#output").text(`The model predicts a high risk of diabetes with a probability of ${prob}.`);
             } else {
-                $("#output").text(`You did not survive with probability ${prob}, sorry. :(`);
+                $("#output").text(`The model predicts a low risk of diabetes with a probability of ${prob}.`);
             }
-
         },
         error: function(XMLHttpRequest, textStatus, errorThrown) {
-            alert("Status: " + textStatus);
-            alert("Error: " + errorThrown);
+            // Display error messages in a user-friendly way
+            $("#output").text(`An error occurred: ${textStatus}. Please try again later.`);
+            console.error("Error details:", errorThrown);
         }
     });
 
