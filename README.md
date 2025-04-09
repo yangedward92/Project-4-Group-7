@@ -1,2 +1,11 @@
-# Project-4-Group-7
-Project 4 Pima Indian Heritage (Diabetes)
+Diabetes Prediction App
+- Full-stack web app with ML & Tableau for diabetes prediction
+- Used Pima Indian Heritage dataset
+- Preprocessed with imputation, scaling, and SMOTE for balance
+- Tested multiple models; Random Forest chosen for deployment
+- Built Flask app with ML inference and embedded dashboards
+- Dashboard 1: Demographics & outcomes
+- Dashboard 2: Health metrics and correlations
+- App helps answer questions on diabetes risk patterns
+- Limitations: class imbalance, no male patients, limited features
+- Future Work: add more features, explainability, user auth, better UI
