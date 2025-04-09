@@ -1,0 +1,38 @@
+/* Coolors Exported Palette - https://coolors.co/122c34-224870-2a4494-4ea5d9-44cfcb */
+
+/* CSS HEX */
+:root {
+  --gunmetal: #122c34ff;
+  --indigo-dye: #224870ff;
+  --marian-blue: #2a4494ff;
+  --picton-blue: #4ea5d9ff;
+  --robin-egg-blue: #44cfcbff;
+
+  /* CSS HSL */
+  --gunmetal-hsl: hsla(194, 49%, 14%, 1);
+  --indigo-dye-hsl: hsla(211, 53%, 29%, 1);
+  --marian-blue-hsl: hsla(225, 56%, 37%, 1);
+  --picton-blue-hsl: hsla(202, 65%, 58%, 1);
+  --robin-egg-blue-hsl: hsla(178, 59%, 54%, 1);
+}
+
+/* CSS Gradients */
+.gradient-top {
+  background: linear-gradient(0deg, var(--gunmetal), var(--indigo-dye), var(--marian-blue), var(--picton-blue), var(--robin-egg-blue));
+}
+
+.gradient-right {
+  background: linear-gradient(90deg, var(--gunmetal), var(--indigo-dye), var(--marian-blue), var(--picton-blue), var(--robin-egg-blue));
+}
+
+.gradient-bottom {
+  background: linear-gradient(180deg, var(--gunmetal), var(--indigo-dye), var(--marian-blue), var(--picton-blue), var(--robin-egg-blue));
+}
+
+.gradient-left {
+  background: linear-gradient(270deg, var(--gunmetal), var(--indigo-dye), var(--marian-blue), var(--picton-blue), var(--robin-egg-blue));
+}
+
+.gradient-radial {
+  background: radial-gradient(var(--gunmetal), var(--indigo-dye), var(--marian-blue), var(--picton-blue), var(--robin-egg-blue));
+}
