@@ -13,6 +13,11 @@ def home():
     """Render the home page."""
     return render_template("index.html")
 
+@app.route("/diabetes_predML")
+def diabetes_pred_ml():
+    """Render the Diabetes Prediction page."""
+    return render_template("diabetes_predML.html")
+
 @app.route("/works_cited")
 def works_cited():
     """Render the works cited page."""
@@ -33,9 +38,9 @@ def tableau2():
     """Render the Tableau 2 visualization page."""
     return render_template("tableau_2.html")
 
-@app.route("/diabetes_predML", methods=["GET", "POST"])
+@app.route("/makePredictions", methods=["POST"])
 def make_predictions():
-    content = request.get_json["data"]
+    content = request.json["data"]
     print(content)
     
             
