@@ -14,7 +14,7 @@
 
 </head>
 
-<body>
+<body style="background: linear-gradient(to top, #224870, #4ea5d9ff); min-height: 100vh; background-repeat: no-repeat; background-attachment: fixed;">
     <nav class="navbar navbar-expand-lg bg-primary">
         <div class="container-fluid">
           <a class="navbar-brand" href="#">Navbar</a>
@@ -44,81 +44,84 @@
             </ul>
           </div>
         </div>
-      </nav>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-        <a class="navbar-brand" href="#"></a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-
     </nav>
 
-    
-    <header class="bg-primary text-white text-center py-5">
+    <header class="text-white text-center py-5" style="background-color: #224870ff;">
         <div class="container">
             <h2>Diabetes Prediction Analysis</h2>
-            <p class="lead">Please consult your physician for following information</p>
+            <p class="lead">Please note that this tool is intended for use in consultation with your physician and should not be relied upon for medical advice.</p>
+            <p class="lead">Health Information data to be provided following laboratory examination.</p>
+
         </div>
+    </header>
     <hr style="color:lightgray; border-width: 3px;">
     <div class="container">
-        <div class="card border-primary mb-3" style="max-width: 20rem;">
-            <div class="card-header">Filters</div>
-            <div class="card-body">
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label class="col-form-label" for="Pregnancies">Pregnancies</label>
-                            <input type="number" class="form-control" value="" id="Pregnancies">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card border-primary mb-3" style="max-width: 20rem;">
+                    <div class="card-header">Health Information</div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label class="col-form-label" for="Pregnancies">Pregnancies</label>
+                                    <input type="number" class="form-control" value="" id="Pregnancies">
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-form-label" for="Glucose">Glucose</label>
+                                    <input type="number" class="form-control" value="" id="Glucose">
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-form-label" for="BloodPressure">Blood Pressure</label>
+                                    <input type="number" class="form-control" value="" id="BloodPressure">
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-form-label" for="SkinThickness">Skin Thickness</label>
+                                    <input type="number" class="form-control" value="" id="SkinThickness">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label class="col-form-label" for="Insulin">Insulin</label>
+                                    <input type="number" class="form-control" value="" id="Insulin">
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-form-label" for="BMI">BMI</label>
+                                    <input type="number" class="form-control" value="" id="BMI">
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-form-label" for="DiabetesPedigreeFunction">Diabetes Pedigree Function</label>
+                                    <input type="number" class="form-control" value="0.078" id="DiabetesPedigreeFunction">
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-form-label" for="Age">Age</label>
+                                    <input type="number" class="form-control" value="" id="Age">
+                                </div>
+                            </div>
                         </div>
-                        <div class="form-group">
-                            <label class="col-form-label" for="Glucose">Glucose</label>
-                            <input type="number" class="form-control" value="" id="Glucose">
-                        </div>
-                        <div class="form-group">
-                            <label class="col-form-label" for="BloodPressure">Blood Pressure</label>
-                            <input type="number" class="form-control" value="" id="BloodPressure">
-                        </div>
-                        <div class="form-group">
-                            <label class="col-form-label" for="SkinThickness">Skin Thickness</label>
-                            <input type="number" class="form-control" value="" id="SkinThickness">
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label class="col-form-label" for="Insulin">Insulin</label>
-                            <input type="number" class="form-control" value="" id="Insulin">
-                        </div>
-                        <div class="form-group">
-                            <label class="col-form-label" for="BMI">BMI</label>
-                            <input type="number" class="form-control" value="" id="BMI">
-                        </div>
-                        <div class="form-group">
-                            <label class="col-form-label" for="DiabetesPedigreeFunction">Diabetes Pedigree Function</label>
-                            <input type="number" class="form-control" value="0.078" id="DiabetesPedigreeFunction">
-                        </div>
-                        <div class="form-group">
-                            <label class="col-form-label" for="Age">Age</label>
-                            <input type="number" class="form-control" value="" id="Age">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <button type="button" class="btn btn-primary" id="filter" style="margin-top: 20px;">Make Prediction!</button>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col-md-12">
-                        <button type="button" class="btn btn-primary" id="filter" style="margin-top: 20px;">Make Prediction!</button>
+            </div>
+            <div class="col-md-6">
+                <div class="card border-secondary mb-3" style="max-width: 20rem;">
+                    <div class="card-header">Diabetes Risk Prediction</div>
+                    <div class="card-body">
+                        <h5 id="output" style="color: black !important;"></h5>
                     </div>
                 </div>
             </div>
         </div>
     </div>
     <hr style="color:lightgray; border-width: 3px;">
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-md-12">
-                <h1 id="output"></h1>
-            </div>
-        </div>
-    </div>
-
 </body>
+<!-- Footer -->
+<footer class="bg-dark text-white text-center py-3">
+    <p>&copy; 2025 Diabetes Prediction Web Application. All rights reserved</p>
+</footer>
 
 </html>
