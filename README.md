@@ -2,7 +2,7 @@ Diabetes Prediction App
 - Full-stack web app with ML & Tableau for diabetes prediction
 - Used Pima Indian Heritage dataset
 - Preprocessed with imputation, scaling, and SMOTE for balance
-- Tested multiple models; Random Forest chosen for deployment
+- Tested multiple models; Logistic Regression chosen for deployment
 - Built Flask app with ML inference and embedded dashboards
 - Dashboard 1: Demographics & outcomes
 - Dashboard 2: Health metrics and correlations
